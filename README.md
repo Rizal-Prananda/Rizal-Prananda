@@ -1,32 +1,5 @@
-# Rizal Prananda
-
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=2563EB&center=true&vCenter=true&width=600&lines=IT+System+Analyst;Laravel+%7C+Astro+%7C+TypeScript;Building+scalable+healthcare+systems;Clean+architecture+%7C+Developer+experience" alt="Typing SVG" />
-</p>
-
-<p align="center">
-  <a href="https://github.com/Rizal-Prananda">
-    <img src="https://img.shields.io/github/followers/Rizal-Prananda?label=Followers&style=flat-square&color=2563EB" alt="Followers" />
-  </a>
-  <a href="https://github.com/Rizal-Prananda?tab=repositories">
-    <img src="https://img.shields.io/github/stars/Rizal-Prananda?style=flat-square&color=F59E0B" alt="Stars" />
-  </a>
-  <a href="https://github.com/Rizal-Prananda/ecommerce-vfull">
-    <img src="https://img.shields.io/github/stars/Rizal-Prananda/ecommerce-vfull?style=flat-square&color=10B981&label=ecommerce-vfull" alt="E-commerce Stars" />
-  </a>
-  <a href="https://github.com/Rizal-Prananda/Rizal-Prananda">
-    <img src="https://img.shields.io/github/stars/Rizal-Prananda/Rizal-Prananda?style=flat-square&color=8B5CF6&label=Profile" alt="Profile Stars" />
-  </a>
-  <a href="https://github.com/Rizal-Prananda?tab=followers">
-    <img src="https://img.shields.io/github/following/Rizal-Prananda?style=flat-square&color=EC4899" alt="Following" />
-  </a>
-  <a href="https://github.com/Rizal-Prananda?tab=repositories">
-    <img src="https://img.shields.io/github/followers/Rizal-Prananda?label=Repos&style=flat-square&color=6366F1" alt="Repositories" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Rizal-Prananda&style=flat-square&color=2563EB&label=Profile+Views" alt="Profile Views" />
+  <img src="https://raw.githubusercontent.com/Rizal-Prananda/Rizal-Prananda/main/assets/hero-banner.svg" alt="Rizal Prananda - IT System Analyst" width="100%" />
 </p>
 
 ---
@@ -36,7 +9,7 @@
 ```typescript
 interface Engineer {
   name: string;
-  role: string;
+  role: string[];
   company: string;
   location: string;
   focus: string[];
@@ -46,20 +19,24 @@ interface Engineer {
 
 const rizal: Engineer = {
   name: "Rizal Prananda",
-  role: "IT System Analyst",
+  role: [
+    "IT System Analyst",
+    "Backend Developer",
+    "Hospital Information Systems"
+  ],
   company: "Oetomo Hospital",
   location: "Bandung, Indonesia",
   focus: [
-    "Healthcare Information Systems",
+    "Hospital Information Systems (HIS)",
+    "BPJS / E-Klaim Integration",
     "E-commerce & CMS Platforms",
-    "Laravel + Astro Ecosystem",
     "System Architecture & Integration"
   ],
   currently: [
-    "Building ecommerce-vfull (Laravel 13 + Astro 6)",
+    "Building ecommerce-vfull (Laravel 13 + Astro 6 + Prisma)",
     "Modernizing healthcare IT infrastructure",
-    "Exploring Astro + React island architecture",
-    "Deepening Laravel 13 + PHP 8.3 expertise"
+    "Deepening Laravel 13 + PHP 8.3 expertise",
+    "Exploring Astro + React island architecture"
   ],
   philosophy: "Clean architecture over clever code. Developer experience is a feature."
 };
@@ -68,10 +45,6 @@ const rizal: Engineer = {
 ---
 
 ## Tech Stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=laravel,php,astro,react,typescript,tailwind,prisma,postgresql,sqlite,vite,git,github,linux,vscode,docker&theme=light&perline=8" alt="Tech Stack" />
-</p>
 
 ### Backend & Architecture
 <p align="center">
@@ -120,16 +93,16 @@ const rizal: Engineer = {
 ## GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Rizal-Prananda&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&bg_color=0D1117&title_color=2563EB&text_color=E4E4E7&icon_color=2563EB&border_radius=12" alt="GitHub Stats" height="180" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rizal-Prananda&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=2563EB&text_color=E4E4E7&icon_color=2563EB&border_radius=12&langs_count=8" alt="Top Languages" height="180" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Rizal-Prananda&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github&bg_color=0D1117&title_color=3B82F6&text_color=E4E4E7&icon_color=3B82F6&border_radius=12" alt="GitHub Stats" height="180" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rizal-Prananda&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=3B82F6&text_color=E4E4E7&icon_color=3B82F6&border_radius=12&langs_count=8" alt="Top Languages" height="180" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Rizal-Prananda&theme=github-dark&hide_border=true&background=0D1117&stroke=2563EB&ring=2563EB&fire=F59E0B&currStreakLabel=2563EB&sideNums=E4E4E7&sideLabels=E4E4E7&border_radius=12" alt="GitHub Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Rizal-Prananda&theme=github-dark&hide_border=true&background=0D1117&stroke=3B82F6&ring=3B82F6&fire=FBBF24&currStreakLabel=3B82F6&sideNums=E4E4E7&sideLabels=E4E4E7&border_radius=12" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Rizal-Prananda&theme=github-dark&bg_color=0D1117&color=2563EB&line=2563EB&point=F59E0B&area=true&area_color=2563EB22&hide_border=true&custom_title=Contribution%20Graph" alt="Activity Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Rizal-Prananda&theme=github-dark&bg_color=0D1117&color=3B82F6&line=3B82F6&point=FBBF24&area=true&area_color=3B82F622&hide_border=true&custom_title=Contribution%20Graph" alt="Activity Graph" />
 </p>
 
 <p align="center">
@@ -145,7 +118,7 @@ const rizal: Engineer = {
 
 <p align="center">
   <a href="https://github.com/Rizal-Prananda/ecommerce-vfull">
-    <img src="https://img.shields.io/github/stars/Rizal-Prananda/ecommerce-vfull?style=flat-square&color=F59E0B" alt="Stars" />
+    <img src="https://img.shields.io/github/stars/Rizal-Prananda/ecommerce-vfull?style=flat-square&color=FBBF24" alt="Stars" />
     <img src="https://img.shields.io/github/forks/Rizal-Prananda/ecommerce-vfull?style=flat-square&color=10B981" alt="Forks" />
     <img src="https://img.shields.io/github/last-commit/Rizal-Prananda/ecommerce-vfull?style=flat-square&color=6366F1" alt="Last Commit" />
     <img src="https://img.shields.io/github/languages/top/Rizal-Prananda/ecommerce-vfull?style=flat-square&color=EC4899" alt="Top Language" />
@@ -227,7 +200,7 @@ mindmap
 ## Profile Visitors
 
 <p align="center">
-  <img src="https://profile-counter.glitch.me/Rizal-Prananda/count.svg?style=flat-square&color=2563EB" alt="Visitor Count" />
+  <img src="https://profile-counter.glitch.me/Rizal-Prananda/count.svg?style=flat-square&color=3B82F6" alt="Visitor Count" />
 </p>
 
 ---

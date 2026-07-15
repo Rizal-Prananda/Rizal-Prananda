@@ -1,115 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280">
   <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#161b22;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0e14;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#94a3b8;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="subtitleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
     </linearGradient>
-    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.15" />
-      <stop offset="70%" style="stop-color:#3b82f6;stop-opacity:0" />
-    </radialGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+    <linearGradient id="accentGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentAmber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+    <filter id="termGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1f2937" stroke-width="0.5" opacity="0.5"/>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="0" stroke="#000" stroke-width="1" opacity="0.1"/>
     </pattern>
-    <mask id="fadeMask">
-      <rect x="0" y="0" width="1200" height="320" fill="url(#bgGradient)"/>
-    </mask>
   </defs>
   
-  <!-- Background -->
-  <rect width="1200" height="320" fill="url(#bgGradient)"/>
+  <!-- Terminal background -->
+  <rect width="1200" height="280" fill="url(#termBg)"/>
+  <rect width="1200" height="280" fill="url(#scanlines)" opacity="0.3"/>
   
-  <!-- Subtle grid pattern -->
-  <rect width="1200" height="320" fill="url(#gridPattern)" opacity="0.3"/>
+  <!-- Window chrome -->
+  <rect x="40" y="20" width="1120" height="240" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <rect x="40" y="20" width="1120" height="36" rx="8" fill="#21262d"/>
+  <rect x="40" y="20" width="1120" height="36" fill="url(#scanlines)" opacity="0.1" rx="8"/>
   
-  <!-- Glow accent -->
-  <ellipse cx="600" cy="160" rx="400" ry="200" fill="url(#glowGradient)" filter="url(#glow)"/>
+  <!-- Traffic lights -->
+  <circle cx="70" cy="38" r="7" fill="#ff5f57"/>
+  <circle cx="94" cy="38" r="7" fill="#ffbd2e"/>
+  <circle cx="118" cy="38" r="7" fill="#28ca42"/>
   
-  <!-- Top accent line -->
-  <line x1="0" y1="0" x2="1200" y2="0" stroke="url(#accentGradient)" stroke-width="2" opacity="0.8"/>
+  <!-- Window title -->
+  <text x="180" y="43" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', monospace" font-size="13" font-weight="500" fill="#8b949e">rizal@oetomo ~ </text>
+  <text x="310" y="43" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', monospace" font-size="13" font-weight="500" fill="#58a6ff">$ cat profile.md</text>
   
-  <!-- Left accent bar -->
-  <rect x="80" y="60" width="4" height="200" rx="2" fill="url(#accentGradient)" opacity="0.6"/>
+  <!-- Cursor blink -->
+  <rect x="460" y="30" width="10" height="20" fill="#58a6ff" opacity="0.8">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
   
-  <!-- Name -->
-  <text x="100" y="145" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="48" font-weight="700" fill="url(#textGradient)" filter="url(#textGlow)" letter-spacing="-0.5px">Rizal Prananda</text>
-  
-  <!-- Title tags container -->
-  <g transform="translate(100, 170)">
-    <!-- IT System Analyst -->
-    <rect x="0" y="0" width="220" height="32" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="1" opacity="0.8"/>
-    <text x="110" y="22" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" font-weight="600" fill="#3b82f6" text-anchor="middle" letter-spacing="0.3px">IT System Analyst</text>
+  <!-- Output lines -->
+  <g font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', monospace" font-size="14" fill="#e6edf3">
+    <!-- Header -->
+    <text x="70" y="85" fill="url(#accentBlue)" font-weight="700" font-size="28" letter-spacing="-0.5px">Rizal Prananda</text>
     
-    <!-- Backend Developer -->
-    <rect x="240" y="0" width="200" height="32" rx="16" fill="#1e293b" stroke="#06b6d4" stroke-width="1" opacity="0.8"/>
-    <text x="340" y="22" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" font-weight="600" fill="#06b6d4" text-anchor="middle" letter-spacing="0.3px">Backend Developer</text>
+    <!-- Divider -->
+    <text x="70" y="112" fill="#30363d" font-size="12">─────────────────────────────────────────────────────────────────────────────</text>
     
-    <!-- Hospital Information Systems -->
-    <rect x="460" y="0" width="280" height="32" rx="16" fill="#1e293b" stroke="#8b5cf6" stroke-width="1" opacity="0.8"/>
-    <text x="600" y="22" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" font-weight="600" fill="#8b5cf6" text-anchor="middle" letter-spacing="0.3px">Hospital Information Systems</text>
+    <!-- Role tags -->
+    <text x="70" y="140" fill="#8b949e" font-size="13">IT System Analyst</text>
+    <text x="230" y="140" fill="url(#accentBlue)" font-size="13" font-weight="600">Backend Developer</text>
+    <text x="430" y="140" fill="url(#accentGreen)" font-size="13" font-weight="600">Hospital Information Systems</text>
+    
+    <!-- Company/Location -->
+    <text x="70" y="168" fill="#6e7681" font-size="13">Oetomo Hospital  •  Bandung, Indonesia</text>
+    
+    <!-- Divider -->
+    <text x="70" y="192" fill="#30363d" font-size="12">─────────────────────────────────────────────────────────────────────────────</text>
+    
+    <!-- Status line -->
+    <text x="70" y="220" fill="#58a6ff" font-size="13">▶  Building ecommerce-vfull (Laravel 13 + Astro 6 + Prisma)</text>
+    <text x="70" y="242" fill="#58a6ff" font-size="13">▶  Modernizing healthcare IT infrastructure</text>
   </g>
   
-  <!-- Company & Location -->
-  <text x="100" y="245" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="14" font-weight="400" fill="#64748b" letter-spacing="0.2px">Oetomo Hospital  •  Bandung, Indonesia</text>
-  
-  <!-- Right side decorative elements -->
-  <g transform="translate(900, 160)">
-    <!-- Animated dots -->
-    <circle cx="-50" cy="-60" r="3" fill="#3b82f6" opacity="0.6">
-      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="50" cy="-60" r="3" fill="#06b6d4" opacity="0.6">
-      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="0" cy="60" r="3" fill="#8b5cf6" opacity="0.6">
-      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    
-    <!-- Decorative brackets -->
-    <g stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.4">
-      <path d="M-100,-100 L-60,-100 M-100,-100 L-100,-60"/>
-      <path d="M100,-100 L60,-100 M100,-100 L100,-60" transform="scale(-1,1)"/>
-      <path d="M-100,100 L-60,100 M-100,100 L-100,60"/>
-      <path d="M100,100 L60,100 M100,100 L100,60" transform="scale(-1,1)"/>
-    </g>
+  <!-- Right side status badges -->
+  <g transform="translate(850, 85)">
+    <rect x="0" y="0" width="280" height="28" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="140" y="20" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" font-weight="600" fill="#58a6ff" text-anchor="middle">PONYTAIL MODE: ULTRA</text>
   </g>
   
-  <!-- Bottom accent line -->
-  <line x1="0" y1="318" x2="1200" y2="318" stroke="url(#accentGradient)" stroke-width="1" opacity="0.5"/>
-  
-  <!-- Corner accents -->
-  <g stroke="url(#accentGradient)" stroke-width="2" fill="none" opacity="0.5">
-    <path d="M20,20 L60,20 M20,20 L20,60"/>
-    <path d="M1180,20 L1140,20 M1180,20 L1180,60" transform="scale(-1,1) translate(-1200,0)"/>
-    <path d="M20,300 L60,300 M20,300 L20,260"/>
-    <path d="M1180,300 L1140,300 M1180,300 L1180,260" transform="scale(-1,1) translate(-1200,0)"/>
+  <g transform="translate(850, 130)">
+    <rect x="0" y="0" width="130" height="24" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="1" opacity="0.8"/>
+    <text x="65" y="16" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" font-weight="600" fill="#3b82f6" text-anchor="middle">Laravel 13.x</text>
   </g>
+  <g transform="translate(990, 130)">
+    <rect x="0" y="0" width="130" height="24" rx="4" fill="#1e293b" stroke="#06b6d4" stroke-width="1" opacity="0.8"/>
+    <text x="65" y="16" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" font-weight="600" fill="#06b6d4" text-anchor="middle">Astro 6.x</text>
+  </g>
+  <g transform="translate(850, 165)">
+    <rect x="0" y="0" width="130" height="24" rx="4" fill="#1e293b" stroke="#10b981" stroke-width="1" opacity="0.8"/>
+    <text x="65" y="16" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" font-weight="600" fill="#10b981" text-anchor="middle">PHP 8.3</text>
+  </g>
+  <g transform="translate(990, 165)">
+    <rect x="0" y="0" width="130" height="24" rx="4" fill="#1e293b" stroke="#f59e0b" stroke-width="1" opacity="0.8"/>
+    <text x="65" y="16" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" font-weight="600" fill="#f59e0b" text-anchor="middle">TypeScript 5.x</text>
+  </g>
+  
+  <!-- Bottom prompt -->
+  <text x="70" y="268" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="13" fill="#8b949e">rizal@oetomo ~ </text>
+  <text x="195" y="268" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="13" fill="#58a6ff">$ _</text>
+  <rect x="215" y="256" width="10" height="20" fill="#58a6ff" opacity="0.8">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
 </svg>
