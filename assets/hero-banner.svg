@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#161b22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1117;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#94a3b8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="subtitleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.15" />
+      <stop offset="70%" style="stop-color:#3b82f6;stop-opacity:0" />
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1f2937" stroke-width="0.5" opacity="0.5"/>
+    </pattern>
+    <mask id="fadeMask">
+      <rect x="0" y="0" width="1200" height="320" fill="url(#bgGradient)"/>
+    </mask>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="320" fill="url(#bgGradient)"/>
+  
+  <!-- Subtle grid pattern -->
+  <rect width="1200" height="320" fill="url(#gridPattern)" opacity="0.3"/>
+  
+  <!-- Glow accent -->
+  <ellipse cx="600" cy="160" rx="400" ry="200" fill="url(#glowGradient)" filter="url(#glow)"/>
+  
+  <!-- Top accent line -->
+  <line x1="0" y1="0" x2="1200" y2="0" stroke="url(#accentGradient)" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Left accent bar -->
+  <rect x="80" y="60" width="4" height="200" rx="2" fill="url(#accentGradient)" opacity="0.6"/>
+  
+  <!-- Name -->
+  <text x="100" y="145" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="48" font-weight="700" fill="url(#textGradient)" filter="url(#textGlow)" letter-spacing="-0.5px">Rizal Prananda</text>
+  
+  <!-- Title tags container -->
+  <g transform="translate(100, 170)">
+    <!-- IT System Analyst -->
+    <rect x="0" y="0" width="220" height="32" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="1" opacity="0.8"/>
+    <text x="110" y="22" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" font-weight="600" fill="#3b82f6" text-anchor="middle" letter-spacing="0.3px">IT System Analyst</text>
+    
+    <!-- Backend Developer -->
+    <rect x="240" y="0" width="200" height="32" rx="16" fill="#1e293b" stroke="#06b6d4" stroke-width="1" opacity="0.8"/>
+    <text x="340" y="22" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" font-weight="600" fill="#06b6d4" text-anchor="middle" letter-spacing="0.3px">Backend Developer</text>
+    
+    <!-- Hospital Information Systems -->
+    <rect x="460" y="0" width="280" height="32" rx="16" fill="#1e293b" stroke="#8b5cf6" stroke-width="1" opacity="0.8"/>
+    <text x="600" y="22" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" font-weight="600" fill="#8b5cf6" text-anchor="middle" letter-spacing="0.3px">Hospital Information Systems</text>
+  </g>
+  
+  <!-- Company & Location -->
+  <text x="100" y="245" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="14" font-weight="400" fill="#64748b" letter-spacing="0.2px">Oetomo Hospital  •  Bandung, Indonesia</text>
+  
+  <!-- Right side decorative elements -->
+  <g transform="translate(900, 160)">
+    <!-- Animated dots -->
+    <circle cx="-50" cy="-60" r="3" fill="#3b82f6" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="-60" r="3" fill="#06b6d4" opacity="0.6">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="60" r="3" fill="#8b5cf6" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Decorative brackets -->
+    <g stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.4">
+      <path d="M-100,-100 L-60,-100 M-100,-100 L-100,-60"/>
+      <path d="M100,-100 L60,-100 M100,-100 L100,-60" transform="scale(-1,1)"/>
+      <path d="M-100,100 L-60,100 M-100,100 L-100,60"/>
+      <path d="M100,100 L60,100 M100,100 L100,60" transform="scale(-1,1)"/>
+    </g>
+  </g>
+  
+  <!-- Bottom accent line -->
+  <line x1="0" y1="318" x2="1200" y2="318" stroke="url(#accentGradient)" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Corner accents -->
+  <g stroke="url(#accentGradient)" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M20,20 L60,20 M20,20 L20,60"/>
+    <path d="M1180,20 L1140,20 M1180,20 L1180,60" transform="scale(-1,1) translate(-1200,0)"/>
+    <path d="M20,300 L60,300 M20,300 L20,260"/>
+    <path d="M1180,300 L1140,300 M1180,300 L1180,260" transform="scale(-1,1) translate(-1200,0)"/>
+  </g>
+</svg>
